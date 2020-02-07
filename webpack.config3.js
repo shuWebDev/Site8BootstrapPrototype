@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/typescript/index.ts',
+    './src/js/index.js',
     './src/sass/index.scss'
   ],
   output: {
@@ -12,11 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -36,7 +31,5 @@ module.exports = {
         ]
       }
     ]
-  }, resolve: {
-    extensions: [".tsx", ".ts", ".js"]
   }
 };
