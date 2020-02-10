@@ -1,7 +1,9 @@
-@import 'bootstrap';
+@import 'custom';
+@import '~bootstrap/scss/bootstrap';
+
 
 $purple: #957bbe;
 
 .purple-container {
-  background-color: $purple;
+  background-color: $blue;
 }

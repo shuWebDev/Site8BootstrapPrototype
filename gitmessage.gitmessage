@@ -1,0 +1,18 @@
+# Summary of 50 characters or less.
+Updates “robots.txt” file 
+
+# Issue Number and URL to ticket
+SNow: REQ0000000
+Title: Update Robot/Spider Blocker 
+URL: https://shuprod.service-now.com/sc_request.do?sys_id=1c177ab44fe8ab40a9ef0f1f0310c7f5&sysparm_view=&sysparm_view_forced=true&sysparm_time=1536757126866  
+
+# Detail typically wrapped to 72 characters. 
+Updates robots.txt file to match changes made by the vendor 
+during the outage. They included the blocking of Yahoo’s web crawler. 
+
+
+# Deployment Hook(s) 
+[  ]
+
+
+# Please keep one (1) empty line between sections. 

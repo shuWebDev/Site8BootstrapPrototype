@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devsass": "webpack --config ./webpack.sass.config.js",
-    "devjs": "webpack --config ./webpack.typescript.config.js",
-    "build": "webpack --config ./webpack.production.config.js"
+    "devsass": "git pull origin development && webpack --config ./webpack.sass.config.js",
+    "devjs": "git pull origin development && webpack --config ./webpack.typescript.config.js",
+    "build": "git pull origin master webpack --config ./webpack.production.config.js"
   },
   "author": "Seton Hall University",
   "license": "ISC",
