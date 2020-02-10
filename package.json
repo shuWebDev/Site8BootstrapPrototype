@@ -1,12 +1,15 @@
 {
   "name": "bootstrap-testing",
   "version": "1.0.0",
-  "description": "testing bootstrap ",
+  "description": "testing bootstrap, only using Webpack for asset generation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devsass": "webpack --config ./webpack.sass.config.js",
+    "devjs": "webpack --config ./webpack.typescript.config.js",
+    "build": "webpack --config ./webpack.production.config.js"
   },
-  "author": "Erik Fecher",
+  "author": "Seton Hall University",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.4.1"

@@ -1,10 +1,17 @@
+// webpack.typescript.config.js
+// handles Webpack configuration specifically for JS 
+// file generation. Produces app.min.js which should contain 
+// Bootstrap JS, our own generated JS and JQuery still needed for 
+// Bootstrap as of version 4
+
+
 const path = require('path');
-//const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 
 module.exports = {
+  mode: 'development',
   entry: [
-    './src/typescript/index.ts',
-    './src/sass/index.scss'
+    './src/typescript/index.ts'
   ],
   output: {
     filename: 'app.min.js',
@@ -24,16 +31,6 @@ module.exports = {
           loader: "babel-loader",
           options: { presets: ["@babel/preset-env"] }
         }
-      }, {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "file-loader",
-            options: { outputPath: "../style", name: "[name].min.css"}
-          },
-          "sass-loader"
-        ]
       }
     ]
   }, resolve: {

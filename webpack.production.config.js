@@ -1,9 +1,16 @@
+// webpack.production.config.js
+// Webpack configuration for production build
+// Builds all assets, TS/JS -> app.min.js
+// SCSS -> CSS for push to prod and uses Webpack 
+// built-in optimizations where applicable
+
 const path = require('path');
-//const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 
 module.exports = {
+  mode: 'production',
   entry: [
-    './src/js/index.js',
+    './src/typescript/index.ts',
     './src/sass/index.scss'
   ],
   output: {
@@ -12,6 +19,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -31,5 +43,7 @@ module.exports = {
         ]
       }
     ]
+  }, resolve: {
+    extensions: [".tsx", ".ts", ".js"]
   }
 };
